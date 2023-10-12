@@ -1,0 +1,808 @@
+@font-face {
+    font-family: CercoDEMO-Medium;
+    src: url(/fuentes/CercoDEMO-Medium.otf);
+  }
+  
+  @font-face {
+    font-family: CercoDEMO-Regular;
+    src: url(/fuentes/CercoDEMO-Regular.otf);
+  }
+  
+  @font-face {
+    font-family: CercoDEMO-Light;
+    src: url(/fuentes/CercoDEMO-Light.otf);
+  }
+  @font-face {
+    font-family: CercoDEMO-Bold;
+    src: url(/fuentes/CercoDEMO-Bold.otf);
+  }
+  
+  @font-face {
+    font-family: CercoDEMO-Black;
+    src: url(/fuentes/CercoDEMO-Black.otf);
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  .containerAnswer {
+    max-width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  .question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: CercoDEMO-Regular;
+    color: rgb(37, 37, 37);
+  }
+  
+  
+  .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .options button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6e6e6e;
+    color: white;
+  }
+
+  #checkButton {
+    background-color: transparent;
+    margin-top: 20px;
+    border: 2px solid rgb(176, 226, 169);
+    color: #090a0a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #checkButton:hover {
+    background-color: #8bd498;
+    color: white;
+  }
+ 
+  #nextButton {
+    background-color: transparent;
+    margin-top: 20px;
+    border: 2px solid rgb(176, 226, 169);
+    color: #090a0a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Mantén los estilos anteriores */
+
+  #answer {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerBody {
+    font-family: CercoDEMO-Regular;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  #answerHeader {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerSection {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerNav {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerParagraph {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerImg {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  #answerLink {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+
+
+
+  .form{
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  .card-text-footer{
+    font-family: CercoDEMO-light;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 10pt;
+    color: rgb(37, 37, 37);
+  }
+  
+  .box4{
+    text-align: center;
+    color: rgb(172, 172, 172);
+  }
+  
+  .div-box5{
+    font-family: CercoDEMO-Medium;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 18pt;
+    color: rgb(37, 37, 37);
+  }
+  
+  .ul1{
+    font-family: CercoDEMO-Medium;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 10pt;
+    color: rgba(3, 3, 3, 0.815);
+  }
+  
+  .ul2{
+    font-family: CercoDEMO-Medium;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 10pt;
+    color: rgba(2, 2, 2, 0.815);
+  }
+  
+  .titulo-footer{
+    font-family: CercoDEMO-Medium;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 16pt;
+    color: rgb(2, 2, 2);
+  }
+  
+  .container_flex2{
+    background-color: rgb(243, 241, 212);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+  }
+  
+  .box7{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font: 20px;
+  }
+  
+  .box8{
+    color: rgb(44, 44, 44);
+    font-family: CercoDEMO-Regular;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .padre{
+    background-color: rgb(45, 46, 46);
+    font-family: CercoDEMO-Regular;
+    font-size: 8pt;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .img-logo-footer{
+    position: relative;
+    left: 100px;
+    height: 6rem;
+    width: 100px;
+  }
+  
+  .containerIntro {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .containerCard1{
+    max-width: 50%;
+    margin-left: 50px;
+  }
+   
+  .card-text{
+    font-family: CercoDEMO-Regular;
+  }
+
+  .card-body{
+    font-family: CercoDEMO-Black;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: CercoDEMO-Regular;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .card-titlecss{
+    font-family: CercoDEMO-Regular;
+    font-size: 28px;
+    margin-top: 50px;
+    width: 100%;
+
+  }
+  
+  .tag {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    flex: 1;
+    max-width: calc(50% - 40px); /* 50% con margen */
+    box-sizing: border-box;
+    font-family: CercoDEMO-Regular;
+  }
+  
+  .centered-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Asegura que la imagen esté por encima del contenido */
+  }
+  
+  .centered-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .tag h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+
+  h4{
+    margin-top: 10px;
+  }
+  
+  .p-cards {
+    font-family: CercoDEMO-Regular;
+    font-size: 16px;
+
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+
+  .bienvenida-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background-image: url('./img/backgroundgradiant.png'); /* Cambia la ruta por la ubicación de tu imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+  
+  /* Estilos para el título de bienvenida */
+  .titulo-bienvenida {
+    font-size: 4rem;
+    font-family: CercoDEMO-Black;
+    color: #0d8da3;
+    margin: 0;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-20px);
+    animation: fadeSlideIn 3.5s ease-in-out forwards;
+  }
+  
+  /* Estilos para el mensaje de bienvenida */
+  .mensaje-bienvenida {
+    font-size: 1.5rem;
+    font-family: CercoDEMO-Medium;
+    color: #aa4eb6;
+    max-width: 50%;
+    margin-top: 50px;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px);
+    animation: fadeSlideIn 2.5s 1.5s ease-in-out forwards;
+  }
+  .container {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #111111;
+    color: #fff;
+    font-family: CercoDEMO-Light;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .loader {
+    display: none;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  
+  /* Animación para mostrar y desplazar elementos */
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .img-frontend{
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-20px);
+    animation: fadeSlideIn 3.5s ease-in-out forwards;
+  }
+  .containerIntro2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url('./img/backgroundgradiant.png'); /* Cambia la ruta por la ubicación de tu imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+
+  .titulo-introhtml{
+    font-size: 2.0rem;
+    font-family: CercoDEMO-Black;
+    color: #0d8da3;
+    margin-top: 140px;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-20px);
+    animation: fadeSlideIn 7.5s ease-in-out forwards;
+  }
+
+
+  .texto-etiqueta{
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: CercoDEMO-Medium;
+    color: #000000;
+    max-width: 50%;
+    margin-top: 50px;
+}
+
+  .texto-introhtml{
+    font-size: 1.2rem;
+    font-family: CercoDEMO-Medium;
+    color: #000000;
+    max-width: 50%;
+    margin-top: 50px;
+  }
+  
+  .container-card1{
+    margin-left: 10px;
+    margin-bottom: 100px;
+  }
+
+  .card-img-top-header{
+    width: 1200px;
+    height: 600px;
+  }
+  .dropdown-item{
+    font-family: CercoDEMO-Regular;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup iframe {
+    width: 80%;
+    height: 80%;
+}
+
+.popup button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.video-demostrativo{
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+
+#mostrarVideoBtn1 {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#mostrarVideoBtn2 {
+    background-color: #33ffbb;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#mostrarVideoBtn1:hover {
+    background-color: #45a049;
+}
+
+#mostrarVideoBtn2:hover {
+    background-color: #FF704D;
+}
+
+.carousel-content{
+  height: 300px;
+  text-align: center;
+  width: 1000px;
+}
+
+.img-carousel{
+  height: 700px;
+  width: 1000px;
+
+}
+
+.minimal-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal .close {
+  color: #070303;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.texto-etiquetacss{
+font-family: CercoDEMO-Regular;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+
+.seccion-botonmodal{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+  @media (max-width:900px){
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .bienvenida-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      max-width: 55vh;
+      background-image: url('./img/backgroundgradiant.png'); /* Cambia la ruta por la ubicación de tu imagen */
+      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+      background-position: center; /* Centra la imagen en el contenedor */
+    }
+
+    .mensaje-bienvenida {
+      font-size: 1.2rem;
+      font-family: CercoDEMO-Medium;
+      color: #aa4eb6;
+      max-width: 50%;
+      margin-top: 50px;
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateY(20px);
+      animation: fadeSlideIn 2.5s 1.5s ease-in-out forwards;
+    }
+
+    .titulo-bienvenida {
+      font-size: 1.5rem;
+      font-family: CercoDEMO-Black;
+      color: #b2cace;
+      margin: 0;
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateY(-20px);
+      animation: fadeSlideIn 3.5s ease-in-out forwards;
+    }
+    .texto-etiqueta{
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: CercoDEMO-Medium;
+      color: #000000;
+      max-width: 50%;
+      margin-top: 50px;
+  }
+  .texto-introhtml{
+    font-size: 1.1rem;
+    font-family: CercoDEMO-Medium;
+    color: #000000;
+    height: 60vh;
+    max-width: 50%;
+    margin-top: 50px;
+  }
+
+  .containerIntro2{
+    margin-bottom: 300px;
+  }
+
+  .texto-introhtml{
+    font-size: 0.8rem;
+    font-family: CercoDEMO-Medium;
+    color: #000000;
+    height: 60vh;
+    max-width: 50%;
+    margin-top: 50px;
+  }
+
+  .img-carousel{
+    height: 300px;
+    width: 100%;
+  
+  }
+
+  .card-text{
+    font-family: CercoDEMO-Regular;
+    font-size: 1.2vh;
+  }
+  
+  
+  }
+  @media (max-width:768px){
+
+    
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .bienvenida-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      max-width: 55vh;
+      background-image: url('./img/backgroundgradiant.png'); /* Cambia la ruta por la ubicación de tu imagen */
+      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+      background-position: center; /* Centra la imagen en el contenedor */
+    }
+
+    .mensaje-bienvenida {
+      font-size: 1.2rem;
+      font-family: CercoDEMO-Medium;
+      color: #aa4eb6;
+      max-width: 50%;
+      margin-top: 50px;
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateY(20px);
+      animation: fadeSlideIn 2.5s 1.5s ease-in-out forwards;
+    }
+
+    .titulo-bienvenida {
+      font-size: 1.5rem;
+      font-family: CercoDEMO-Black;
+      color: #b2cace;
+      margin: 0;
+      opacity: 0; /* Inicialmente oculto */
+      transform: translateY(-20px);
+      animation: fadeSlideIn 3.5s ease-in-out forwards;
+    }
+    .texto-etiqueta{
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: CercoDEMO-Medium;
+      color: #000000;
+      max-width: 50%;
+      margin-top: 50px;
+  }
+  
+  .containerIntro2{
+    margin-bottom: 300px;
+  }
+
+  .texto-introhtml{
+    font-size: 0.8rem;
+    font-family: CercoDEMO-Medium;
+    color: #000000;
+    height: 60vh;
+    max-width: 50%;
+    margin-top: 50px;
+  }
+
+  .img-carousel{
+    height: 300px;
+    width: 100%;
+  
+  }
+  }
